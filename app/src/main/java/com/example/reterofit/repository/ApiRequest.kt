@@ -11,7 +11,7 @@ abstract class  ApiRequest {
         if(response.isSuccessful){
             return response.body()!!
         }else{
-            //@todo handle api exception handling
+            //@todo handle api except
             println("errot"+response.toString())
             throw ApiException(response.code().toString())
         }
